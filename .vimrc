@@ -9,7 +9,8 @@ call vundle#begin()
 
   Plugin 'gmarik/Vundle.vim'
   Bundle 'kchmck/vim-coffee-script'
-
+  Bundle 'mustache/vim-mustache-handlebars'
+  
 call vundle#end()            " required
 filetype plugin indent on    " required
 
