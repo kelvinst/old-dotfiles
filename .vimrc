@@ -8,9 +8,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
   Plugin 'gmarik/Vundle.vim'
-  Bundle 'kchmck/vim-coffee-script'
-  Bundle 'mustache/vim-mustache-handlebars'
-  Bundle 'kien/ctrlp.vim'
+  Plugin 'kchmck/vim-coffee-script'
+  Plugin 'mustache/vim-mustache-handlebars'
+  Plugin 'kien/ctrlp.vim'
+  Plugin 'bling/vim-airline'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
