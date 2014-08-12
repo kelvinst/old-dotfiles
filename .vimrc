@@ -17,6 +17,13 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 "*****************************************************************************
+"" Airline config
+"*****************************************************************************
+set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:airline_theme='hybrid'
+
+"*****************************************************************************
 "" Configuring indentation defaults
 "*****************************************************************************
 set expandtab
