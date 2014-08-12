@@ -1,5 +1,5 @@
 "*****************************************************************************
-"" Vundle 
+"" Vundle
 "*****************************************************************************
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -11,7 +11,7 @@ call vundle#begin()
   Bundle 'kchmck/vim-coffee-script'
   Bundle 'mustache/vim-mustache-handlebars'
   Bundle 'kien/ctrlp.vim'
-  
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -28,7 +28,7 @@ set softtabstop=2
 set number
 
 "*****************************************************************************
-"" Syntax highlight!!! 
+"" Syntax highlight!!!
 "*****************************************************************************
 syntax on
 
@@ -48,3 +48,9 @@ cab wQ wq
 cab WQ wq
 cab W w
 cab Q q
+
+"*****************************************************************************
+"" Remove trailing spaces on all files
+"*****************************************************************************
+autocmd BufWritePre * :%s/\s\+$//e
+
