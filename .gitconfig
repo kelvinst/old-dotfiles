@@ -18,3 +18,7 @@
 	smudge = git-media-smudge %f
 [core]
 	editor = /usr/bin/vim
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
