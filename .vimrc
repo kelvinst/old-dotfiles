@@ -56,5 +56,5 @@ autocmd BufWritePre * :%s/\s\+$//e
 "*****************************************************************************
 "" Highlighting the over lenghted lines
 "*****************************************************************************
-highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
-match OverLength /\%81v.\+/
+"highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
+"match OverLength /\%81v.\+/
