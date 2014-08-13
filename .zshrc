@@ -81,3 +81,6 @@ export LANG=en_US.UTF-8
 
 # vi mode on sh
 set -o vi
+
+# 256 colors
+export TERM=xterm-256color

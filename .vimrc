@@ -11,9 +11,17 @@ call vundle#begin()
   Plugin 'mustache/vim-mustache-handlebars'
   Plugin 'kien/ctrlp.vim'
   Plugin 'tpope/vim-fugitive'
+  Plugin 'itchyny/lightline.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+"*****************************************************************************
+"" Some more colors
+"*****************************************************************************
+if !has('gui_running')
+  set t_Co=256
+endif
 
 "*****************************************************************************
 "" Configuring indentation defaults
@@ -28,14 +36,74 @@ set softtabstop=2
 set number
 
 "*****************************************************************************
+"" Status bar
+"*****************************************************************************
+set ambiwidth=double
+set laststatus=2
+let g:lightline = {
+      \ 'mode_map': { 'c': 'NORMAL' },
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
+      \ },
+      \ 'component_function': {
+      \   'modified': 'MyModified',
+      \   'readonly': 'MyReadonly',
+      \   'fugitive': 'MyFugitive',
+      \   'filename': 'MyFilename',
+      \   'fileformat': 'MyFileformat',
+      \   'filetype': 'MyFiletype',
+      \   'fileencoding': 'MyFileencoding',
+      \   'mode': 'MyMode',
+      \ },
+      \ 'separator': { 'left': '⮀', 'right': '⮂' },
+      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+      \ }
+
+function! MyModified()
+  return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
+endfunction
+
+function! MyReadonly()
+  return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? '⭤' : ''
+endfunction
+
+function! MyFilename()
+  return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
+        \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
+        \  &ft == 'unite' ? unite#get_status_string() :
+        \  &ft == 'vimshell' ? vimshell#get_status_string() :
+        \ '' != expand('%:t') ? expand('%:t') : '[No Name]') .
+        \ ('' != MyModified() ? ' ' . MyModified() : '')
+endfunction
+
+function! MyFugitive()
+  if &ft !~? 'vimfiler\|gundo' && exists("*fugitive#head")
+    let _ = fugitive#head()
+    return strlen(_) ? '⭠ '._ : ''
+  endif
+  return ''
+endfunction
+
+function! MyFileformat()
+  return winwidth(0) > 70 ? &fileformat : ''
+endfunction
+
+function! MyFiletype()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
+endfunction
+
+function! MyFileencoding()
+  return winwidth(0) > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
+endfunction
+
+function! MyMode()
+  return winwidth(0) > 60 ? lightline#mode() : ''
+endfunction
+
+"*****************************************************************************
 "" Syntax highlight!!!
 "*****************************************************************************
 syntax on
-
-"*****************************************************************************
-"" Insert mode key-mappings
-"*****************************************************************************
-" imap jj <Esc> " map removed due to prevent bad habits
 
 "*****************************************************************************
 "" Usefull upcased abbreviations
@@ -54,8 +122,3 @@ cab Q q
 "*****************************************************************************
 autocmd BufWritePre * :%s/\s\+$//e
 
-"*****************************************************************************
-"" Highlighting the over lenghted lines
-"*****************************************************************************
-"highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
-"match OverLength /\%81v.\+/

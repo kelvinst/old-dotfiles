@@ -1,1 +1,1 @@
-diff . ~ | grep -v '^Only in'
+diff -r . ~ | grep -v '^Only in'
