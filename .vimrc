@@ -1,7 +1,6 @@
 "*****************************************************************************
 "" Vundle
 "*****************************************************************************
-set nocompatible              " be iMproved, required
 filetype off                  " required
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -11,17 +10,9 @@ call vundle#begin()
   Plugin 'kchmck/vim-coffee-script'
   Plugin 'mustache/vim-mustache-handlebars'
   Plugin 'kien/ctrlp.vim'
-  Plugin 'bling/vim-airline'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
-
-"*****************************************************************************
-"" Airline config
-"*****************************************************************************
-set laststatus=2
-let g:airline_powerline_fonts = 1
-let g:airline_theme='hybrid'
 
 "*****************************************************************************
 "" Configuring indentation defaults
