@@ -10,6 +10,7 @@ call vundle#begin()
   Plugin 'kchmck/vim-coffee-script'
   Plugin 'mustache/vim-mustache-handlebars'
   Plugin 'kien/ctrlp.vim'
+  Plugin 'tpope/vim-fugitive'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
