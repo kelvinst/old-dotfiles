@@ -13,6 +13,7 @@ call vundle#begin()
   Plugin 'tpope/vim-fugitive'
   Plugin 'itchyny/lightline.vim'
   Plugin 'tpope/vim-rails'
+  Plugin 'vim-ruby/vim-ruby'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
