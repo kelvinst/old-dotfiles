@@ -12,6 +12,7 @@ call vundle#begin()
   Plugin 'kien/ctrlp.vim'
   Plugin 'tpope/vim-fugitive'
   Plugin 'itchyny/lightline.vim'
+  Plugin 'tpope/vim-rails'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -38,7 +39,7 @@ set number
 "*****************************************************************************
 "" Status bar
 "*****************************************************************************
-set ambiwidth=double
+set linespace=0
 set laststatus=2
 let g:lightline = {
       \ 'mode_map': { 'c': 'NORMAL' },
