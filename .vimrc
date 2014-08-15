@@ -14,6 +14,8 @@ call vundle#begin()
   Plugin 'itchyny/lightline.vim'
   Plugin 'tpope/vim-rails'
   Plugin 'vim-ruby/vim-ruby'
+  Plugin 'tpope/vim-surround'
+  Plugin 'myusuf3/numbers.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -21,6 +23,9 @@ filetype plugin indent on    " required
 "*****************************************************************************
 "" Some more colors
 "*****************************************************************************
+let g:hybrid_use_iTerm_colors = 1
+colorscheme hybrid
+
 if !has('gui_running')
   set t_Co=256
 endif
@@ -35,6 +40,7 @@ set softtabstop=2
 "*****************************************************************************
 "" Showing line numbers
 "*****************************************************************************
+set relativenumber
 set number
 
 "*****************************************************************************
