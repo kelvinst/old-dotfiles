@@ -1,7 +1,6 @@
 [user]
 	email = kelvin.stinghen@gmail.com
 	name = kelvinst
-	mail = kelvin.stinghen@gmail.com
 [alias]
 	co = checkout
 	lg = log --all --graph --decorate --oneline --abbrev-commit
