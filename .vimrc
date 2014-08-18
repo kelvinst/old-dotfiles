@@ -18,9 +18,17 @@ call vundle#begin()
   Plugin 'myusuf3/numbers.vim'
   Plugin 'edkolev/tmuxline.vim'
   Plugin 'YankRing.vim'
+  Plugin 'matchit.zip'
+  Plugin 'kana/vim-textobj-user'
+  Plugin 'nelstrom/vim-textobj-rubyblock'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+"*****************************************************************************
+"" CtrlP plugin
+"*****************************************************************************
+let g:ctrlp_map = ',t'
 
 "*****************************************************************************
 "" Some more colors
@@ -132,3 +140,7 @@ cab Q q
 "*****************************************************************************
 autocmd BufWritePre * :%s/\s\+$//e
 
+"*****************************************************************************
+"" matchit script
+"*****************************************************************************
+runtime macros/matchit.vim
