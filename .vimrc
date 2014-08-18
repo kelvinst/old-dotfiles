@@ -17,6 +17,7 @@ call vundle#begin()
   Plugin 'tpope/vim-surround'
   Plugin 'myusuf3/numbers.vim'
   Plugin 'edkolev/tmuxline.vim'
+  Plugin 'YankRing.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
