@@ -21,9 +21,15 @@ call vundle#begin()
   Plugin 'matchit.zip'
   Plugin 'kana/vim-textobj-user'
   Plugin 'nelstrom/vim-textobj-rubyblock'
+  Plugin 'sjl/gundo.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+"*****************************************************************************
+"" Gundo config
+"*****************************************************************************
+nnoremap <F5> :GundoToggle<CR>
 
 "*****************************************************************************
 "" CtrlP plugin
