@@ -30,6 +30,7 @@ filetype plugin indent on    " required
 "" Gundo config
 "*****************************************************************************
 nnoremap <F5> :GundoToggle<CR>
+let g:gundo_close_on_revert = 1
 
 "*****************************************************************************
 "" CtrlP plugin
