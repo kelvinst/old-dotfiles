@@ -169,3 +169,8 @@ autocmd BufWritePre * :%s/\s\+$//e
 "" matchit script
 "*****************************************************************************
 runtime macros/matchit.vim
+
+"*****************************************************************************
+"" backspace deletes indentation and end of line too please
+"*****************************************************************************
+set backspace=indent,eol
