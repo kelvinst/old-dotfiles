@@ -22,6 +22,7 @@ call vundle#begin()
   Plugin 'kana/vim-textobj-user'
   Plugin 'nelstrom/vim-textobj-rubyblock'
   Plugin 'sjl/gundo.vim'
+  Plugin 'junegunn/limelight.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -164,6 +165,11 @@ cab Q q
 "" Remove trailing spaces on all files
 "*****************************************************************************
 autocmd BufWritePre * :%s/\s\+$//e
+
+"*****************************************************************************
+"" limelight!!!
+"*****************************************************************************
+let g:limelight_conceal_ctermfg = 'black'
 
 "*****************************************************************************
 "" matchit script
