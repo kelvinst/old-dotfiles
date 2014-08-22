@@ -28,6 +28,12 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 "*****************************************************************************
+"" Some scroll options
+"*****************************************************************************
+set scrolloff=2
+set sidescrolloff=5
+
+"*****************************************************************************
 "" tab for autocomplete
 "*****************************************************************************
 function! InsertTabWrapper()
@@ -199,4 +205,4 @@ runtime macros/matchit.vim
 "*****************************************************************************
 "" backspace deletes indentation and end of line too please
 "*****************************************************************************
-set backspace=indent,eol
+set backspace=indent,eol,start
