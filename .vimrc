@@ -32,6 +32,7 @@ filetype plugin indent on    " required
 "" Easy motion config
 "*****************************************************************************
 map <Leader> <Plug>(easymotion-prefix)
+nmap s <Plug>(easymotion-s2)
 
 "*****************************************************************************
 "" Some scroll options
