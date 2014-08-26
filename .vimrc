@@ -23,9 +23,15 @@ call vundle#begin()
   Plugin 'nelstrom/vim-textobj-rubyblock'
   Plugin 'sjl/gundo.vim'
   Plugin 'junegunn/limelight.vim'
+  Plugin 'Lokaltog/vim-easymotion'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+"*****************************************************************************
+"" Easy motion config
+"*****************************************************************************
+map <Leader> <Plug>(easymotion-prefix)
 
 "*****************************************************************************
 "" Some scroll options
