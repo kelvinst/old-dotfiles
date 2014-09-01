@@ -84,3 +84,6 @@ set -o vi
 
 # 256 colors
 export TERM=xterm-256color
+
+# load .profile
+source ~/.profile
