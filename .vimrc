@@ -186,13 +186,15 @@ syntax on
 "" Usefull upcased abbreviations
 "*****************************************************************************
 cab W! w!
-cab Q! q!
-cab Wq wq
+cab W w
 cab Wa wa
+cab Wq wq
 cab wQ wq
 cab WQ wq
-cab W w
+cab Q! q!
 cab Q q
+cab E e
+cab E! e
 
 "*****************************************************************************
 "" Remove trailing spaces on all files
