@@ -25,6 +25,7 @@ call vundle#begin()
   Plugin 'junegunn/limelight.vim'
   Plugin 'Lokaltog/vim-easymotion'
   Plugin 'szw/vim-ctrlspace'
+  Plugin 'mattn/emmet-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
