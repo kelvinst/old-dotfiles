@@ -71,7 +71,9 @@ let g:ctrlp_map = ',t'
 "*****************************************************************************
 "" Some more colors
 "*****************************************************************************
-let g:hybrid_use_iTerm_colors = 1
+" Use this on iTerm
+" let g:hybrid_use_iTerm_colors = 1
+let g:hybrid_use_Xresources = 1
 colorscheme hybrid
 
 if !has('gui_running')
