@@ -18,4 +18,5 @@ To configure vim is required a little more of work. So follow these steps:
 2. Copy the configurations with the commands:
   1. `cp .vimrc ~`
   2. `cp .Xresources ~`
+  3. `cp -R .vim ~`
 3. Open vim and execute `:PluginInstall`
